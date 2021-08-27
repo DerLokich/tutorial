@@ -3,24 +3,21 @@ package main
 
 import (
 	"fmt"
-	"github.com/Velzevol/keyboard/keyboard"
+	"github.com/DerLokich/tutorial/keyboard"
 	"log"
 )
 
 func main() {
-	var status string
-
 	fmt.Print("Enter a grade: ")
 	grade, err := keyboard.GetFloat()
-
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	var status string
 	if grade >= 60 {
 		status = "passing"
 	} else {
 		status = "failing"
 	}
-	fmt.Println(status)
+	fmt.Println("A grade of", grade, "is", status)
 }
