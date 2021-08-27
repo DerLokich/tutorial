@@ -1,4 +1,4 @@
-package inputer
+package main
 
 import (
 	"bufio"
